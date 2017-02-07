@@ -1,93 +1,43 @@
-[HEADER]
+---
+layout: styleguide
+template:
+- /home.html
+---
 
-<div class="row">
-  <div class="column small-12">
+<br>
 
-    <div class="hero">
-      <h1 class="text-center">I Design Beautiful Solutions for Solopreneurs, Startups and Developers</h1>
-
-      <p class="text-center">Let’s work together to bring your projects and idea’s to life!</p>
-
-      <p class="text-center">
-        <a href="#" class="button hollow">VIEW MY WORK</a>
-      </p>
-    </div>
-    
-  </div>
-</div>
-
+<p class="subhead text-center">Design Systems Engineering by <a href="http://www.jamesstone.com" target="_blank">James Stone Consulting</a></p>
+<hr>
+<h1 class="text-center">Marcus Handa Jan 2017</h1>
 
 <section class="background-grey">
-  <div class="row">
-    <div class="column small-12">
-
-      <p class="subhead">Why Hire a UI Designer</p>
-
-      <hr>
-
-      <h2>A Stunning UI Will Elevate Your Business</h2>
-
-      <div class="row">
-        <div class="column medium-5">
-
-          <h3>Startups/Solopreneurs</h3>
-
-          <p class="padded-bottom">First impressions are critical so your interface should look amazing, your reputation depends on it. A clean, modern and intuitive interface will create trust and make an immediate impact to your new business. Don’t sell your amazing idea short with a lacklustre and boring design.</p>
-
-          <h3>Developers</h3>
-
-          <p>Even with a skill list as long as your arm, you’re never guaranteed clients will pick you over the 1000’s of other devs out there. Adding a clean, modern and intuitive interface to your well-coded app or website makes all the difference. Get both right and you’ll land better, higher paying projects.</p>
-
+  <p class="subhead">HTML Front-end Code – click for live version</p>
+  <hr>
+  <h2>Templates</h2>
+  
+  <div class="row align-center">
+    {{#each template}}
+    <div class="columns medium-4">
+      <a href="{{ this }}">
+        <div class="page-thumbnail" style="height:500px;">
+          <iframe src="{{ this }}" frameborder="0"></iframe>
         </div>
-        <div class="column medium-6">
-
-          <img src="http://www.placehold.it/700x500" alt="">
-          
-        </div>
-      </div>
+      </a>
+      <p class="text-center">
+        <a href="{{ this }}" class="button">View {{ this }}</a>
+      </p>
     </div>
+    {{/each}}
   </div>
 </section>
 
 <section>
-  <div class="row">
-    <div class="column small-12">
-      <p class="subhead">My latest and greatest Designs</p>
-      <hr>
-      <h2>My Featured Work</h2>
-    </div>
-  </div>
+<div class="row">
+<div class="column small-12">
+  <p class="subhead">Developer documentation for HTML + CSS modules</p>
+  <hr>
+  <h2>Coded / Living Styleguide</h2>
   
-  WEB DESIGN
-  
-  Gigaton
-  
-  I designed this landing page while working remotely for an agency based in San Diego. Gigaton is a startup that aims to connect investors with ethical opportunities that will have a positive impact on the planet.
-  
-  VIEW CASE STUDY
+  <p class="text-center"><a href="/styleguide.html" class="button">View the Coded / Living Styleguide</a></p>
+</div></div>
 </section>
-
-What my clients say about me
-
-Testimonials
-
-“I’ve worked with Marcus on several websites. He is a rare combination of keen design sense coupled with modern workflow (Sketch 3 and Zeplin). He makes my life as a developer easier. He handles the design freeing me up to focus on the code.”
-
-[SLIDER]
-
-[IMG PROFILE]
-
-James Stone - Web Developer
-
-James Stone Intermedia
-
-Get in touch
-
-Let’s work together!
-
-Click the button below and let’s get started or feel free to look through the case studies for a deeper look at some of my latest projects.
-
-let’s talk
-
-
-[FOOTER]

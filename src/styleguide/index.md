@@ -342,7 +342,36 @@ Form elements in Foundation are styled based on their type attribute rather than
 </form>
 ```
 
+# Hero
 
+Use this at the top of the page to create a nice formatted hero section.
+
+```html_example
+<div class="hero">
+  <h1>I Design Beautiful Solutions for Solopreneurs, Startups and Developers</h1>
+  <p>Let’s work together to bring your projects and idea’s to life!</p>
+  <a href="#" class="button hollow">VIEW MY WORK</a>
+</div>
+```
+
+# Section
+
+Use this to create formatted sections that are white (no options) or with a `.background-grey`. Typically you will want to wrap your content in a grid
+
+```html_example
+<section>
+  <p class="subhead">Why Hire a UI Designer</p>
+  <hr>
+  <h2>A Stunning UI Will Elevate Your Business</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam eligendi illum officiis laudantium quod, at, optio sint neque earum similique, blanditiis dicta ut culpa. Officiis dicta nostrum nulla eum molestias.</p>
+</section>
+
+<section class="background-grey">
+  <p class="subhead">Why Hire a UI Designer</p>
+  <hr>
+  <h2>A Stunning UI Will Elevate Your Business</h2>
+</section>
+```
 
 # New Section
 

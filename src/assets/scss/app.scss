@@ -38,8 +38,9 @@ $brand-spacing-padded-paragraph: 50px;
 @import 'motion-ui';
 
 @include foundation-global-styles;
-@include foundation-grid;
-// @include foundation-flex-grid;
+// @include foundation-grid;
+@include foundation-flex-classes;
+@include foundation-flex-grid;
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;
@@ -83,6 +84,7 @@ $brand-spacing-padded-paragraph: 50px;
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+// * { border: solid 1px #000; }
 
 // Foundation overrides
 
@@ -133,12 +135,25 @@ hr {
 }
 
 .hero {
+  text-align: center;
   padding-top: 150px;
   padding-bottom: 150px;
-  h1 {
-    margin-bottom: 12px;
-  }
-  p {
-    margin-bottom: 20px;
+  h1 { margin-bottom: 12px; }
+  p { margin-bottom: 20px; }
+}
+
+// UTIL below
+
+.page-thumbnail {
+  overflow: hidden;
+  border: solid 2px $primary-color;
+  clear: both;
+  margin-bottom: 20px;
+  iframe { 
+    pointer-events: none;
+    width: 400%;
+    height: 400%;
+    transform-origin: 0 0;
+    transform: scale(0.25);
   }
 }
