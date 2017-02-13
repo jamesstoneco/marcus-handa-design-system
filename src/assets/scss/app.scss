@@ -224,3 +224,14 @@ img.profile {
     border-bottom-right-radius: $ui-radius;
   }
 }
+
+nav.main {
+  a {
+    text-transform: uppercase;
+    color: $text-body-copy;
+  }
+  li.active a {
+    color: $brand-primary;
+    background:none;
+  }
+}
