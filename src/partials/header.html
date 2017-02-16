@@ -4,10 +4,10 @@
     <a href="/" class="logo"><img src="assets/img/logo.svg" alt=""></a>
 
       <ul class="menu float-right">
-        <li class="active"><a href="home.html">home</a></li>
-        <li><a href="">my work</a></li>
-        <li><a href="about.html">about me</a></li>
-        <li><a class="button" href="contact.html">let's talk</a></li>
+        <li {{#ifpage 'home' }}class="active"{{/ifpage}}><a href="home.html">home</a></li>
+        <li {{#ifpage 'work' }}class="active"{{/ifpage}}><a href="work.html">my work</a></li>
+        <li {{#ifpage 'about' }}class="active"{{/ifpage}}><a href="about.html">about me</a></li>
+        <li {{#ifpage 'contact' }}class="active"{{/ifpage}}><a class="button" href="contact.html">let's talk</a></li>
       </ul>
     </nav>
   </div>

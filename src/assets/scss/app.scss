@@ -15,6 +15,13 @@ $ui-card-background-grey: #f7f7f7;
 $ui-outline-grey: #dcdcdc;
 $ui-section-grey: #fbfbfd;
 $ui-slider-bullet-grey: #d8d8d8;
+$ui-shadow-color: #acacac;
+
+// ui shadow settings
+$ui-shadow-opacity: 0.5;
+$ui-shadow-blur: 24px;
+$ui-shadow-offset-x: 6px;
+$ui-shadow-offset-y: $ui-shadow-offset-x;
 
 // fonts
 
@@ -22,19 +29,23 @@ $brand-font-body-copy: "proxima-nova", 'Helvetica Neue', Helvetica, Roboto, Aria
 $brand-font-headline: "brandon-grotesque", 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $brand-font-button: $brand-font-headline;
 
-$brand-spacing-padded-paragraph: 50px;
-$brand-spacing-section: $brand-spacing-padded-paragraph * 2;
+// spacing vars
+
+$brand-spacing-level-1: 50px;
+$brand-spacing-level-2: $brand-spacing-level-1 * 2;
+$brand-spacing-level-3: $brand-spacing-level-1 * 3;
 
 $ui-radius: 4px;
+$ui-radius-circle: 9999px;
 
 
-  // font-family: "brandon-grotesque",sans-serif;
+@mixin brand-shadow($shadow-color: $ui-shadow-color, $shadow-opacity: $ui-shadow-opacity) {
+  box-shadow: $ui-shadow-offset-x $ui-shadow-offset-y $ui-shadow-blur rgba($ui-shadow-color, $ui-shadow-opacity);
+}
 
-  // font-family: "proxima-nova",sans-serif;
 
 
-
-  @import 'brand-settings';
+@import 'brand-settings';
 // @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
@@ -108,17 +119,17 @@ $ui-radius: 4px;
 }
 
 p.padded-bottom {
-  padding-bottom: $brand-spacing-padded-paragraph;
+  padding-bottom: $brand-spacing-level-1;
 }
 
 section {
-  padding-top: $brand-spacing-section;
-  padding-bottom: $brand-spacing-section;
+  padding-top: $brand-spacing-level-2;
+  padding-bottom: $brand-spacing-level-2;
   h1, h2, p.subhead {
     text-align: center;
   }
   h1, h2 {
-    margin-bottom: $brand-spacing-section;
+    margin-bottom: $brand-spacing-level-2;
   }
   h1 {
     // TODO: remap this as a sass function
@@ -140,38 +151,24 @@ section.background-grey {
   background: $ui-section-grey;
 }
 
-
-
 hr {
+  border-color: $brand-primary;
+}
+
+hr.short {
   margin-top: 0;
   margin-bottom: 8px;
-  width: $brand-spacing-padded-paragraph;
-  border-color: $brand-primary;
+  width: $brand-spacing-level-1;
 }
 
 .hero {
   text-align: center;
-  padding-top: $brand-spacing-padded-paragraph * 3;
-  padding-bottom: $brand-spacing-padded-paragraph * 3;
+  padding-top: $brand-spacing-level-3;
+  padding-bottom: $brand-spacing-level-3;
   h1 { margin-bottom: 12px; }
   p { margin-bottom: 20px; }
 }
 
-// UTIL below
-
-.page-thumbnail {
-  overflow: hidden;
-  border: solid 2px $primary-color;
-  clear: both;
-  margin-bottom: 20px;
-  iframe { 
-    pointer-events: none;
-    width: 400%;
-    height: 400%;
-    transform-origin: 0 0;
-    transform: scale(0.25);
-  }
-}
 
 p.category {
   color: $text-subhead;
@@ -182,11 +179,11 @@ p.category {
 }
 
 .featured-work {
-  .row { margin-bottom: $brand-spacing-padded-paragraph; }
+  .row { margin-bottom: $brand-spacing-level-1; }
   .button {margin-bottom: 0; }
 }
 
-.rounded { border-radius: 9999px; }
+.rounded { border-radius: $ui-radius-circle; }
 
 img.profile {
   width: 64px;
@@ -198,7 +195,7 @@ img.profile {
 .about {
   text-align: center;
   h2, p { text-align: left; }
-  h1, img { margin-bottom: $brand-spacing-padded-paragraph; }
+  h1, img { margin-bottom: $brand-spacing-level-1; }
   h2 { margin-bottom: 12px; }
   .profile {
     height: 84px;
@@ -236,40 +233,46 @@ nav.main, nav.footer {
     color: $brand-primary;
     background:none;
   }
+
+  li.active a.button {
+    color: $brand-primary;
+    background:none;
+    border-color: $ui-outline-grey;
+  }
   li a:not(.button){
     padding: 0;
-    margin-right: 50px;
-
+    margin-right: $brand-spacing-level-1;
   }
-  li a {
-    margin-top: 20px;
-  }
+  li a { margin-top: 20px; }
   li a.button {
     margin-top: 12px;
-    padding: 15px 50px;
+    padding: 15px $brand-spacing-level-1;
     color: $white;
-    border-radius: 4px;
+    border-radius: $ui-radius;
   }
 }
 
 nav.footer {
   padding-top: 60px;
   padding-bottom: 14px;
+  li:nth-last-child(1) a { margin-right: 0; }
 }
 
 nav.social {
   padding-top: 60px;
-  float: right;
-
+  // float: right;
+  ul li a {
+    margin-right: 30px;
+    padding: 0;
+  }
+  ul li:nth-last-child(1) a { margin-right: 0; }
 }
 
 
 
 footer {
   background: $ui-section-grey;
-  .logo img {
-    margin-top: 60px;
-  }
+  .logo img { margin-top: 60px; }
   p {
     text-align: center;
     font-size: 12px;
@@ -280,6 +283,150 @@ footer {
 }
 
 
-.menu--icons {
+// SPECIFIC TO WORK-ITEM-HEADER PATTERN
+$work-item-app-height-crop: 456px;
+$work-item-app-width-actual: 435px;
+
+$work-item-site-height-crop: $work-item-app-height-crop;
+$work-item-site-width-actual: 700px;
+
+.work-item-header {
+  text-align: center;
+  overflow: hidden;
+  &.app { height: $work-item-app-height-crop; }
+  &.app img {
+    width: $work-item-app-width-actual;
+    clip: rect(0px,$work-item-app-width-actual,$work-item-app-height-crop,0px);
+  }
+  &.site { height: $work-item-site-height-crop; }
+  &.site img {
+    @include brand-shadow(#adadad, 0.3);
+    width: $work-item-site-width-actual;
+    clip: rect(0px,$work-item-site-width-actual,$work-item-site-height-crop,0px);
+  }
+  img {
+    // center image
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+  }
+}
+
+.menu-colors {
+  li a {
+    // NOTE: set color with inline style
+    text-indent: -9999px;
+    height: 36px;
+    width: 36px;
+    border-radius: $ui-radius-circle;
+    border: solid 1px $ui-outline-grey;
+    margin-right: 10px;
+  }
 
 }
+
+.outcome-screenshot img {
+  @include brand-shadow;
+  margin-bottom: 13px;
+}
+.outcome-link {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.outcome-text { padding-top: 48px; }
+
+.promo-block-work { text-align: center; }
+.promo-block-work img, h3 { margin-bottom: 12px; }
+
+
+
+
+// UTIL below
+
+.page-thumbnail {
+  overflow: hidden;
+  border: solid 2px $primary-color;
+  clear: both;
+  margin-bottom: 20px;
+  iframe { 
+    pointer-events: none;
+    width: 400%;
+    height: 400%;
+    transform-origin: 0 0;
+    transform: scale(0.25);
+  }
+}
+
+
+
+// from original styleguide
+
+    /* This styles individual sections of the style guide */
+    .ss-section:not(:last-child) {
+      padding-top: 0;
+      padding-bottom: 4rem;
+      // border-bottom: 2px solid #ccc;
+      margin-bottom: 0;
+    }
+
+    /* This styles code blocks used for examples. */
+    .ss-code code {
+      display: block;
+      padding: 1rem;
+      overflow-x: scroll;
+      margin-bottom: 1.5rem;
+    }
+
+    /* This styles the example rows used in the grid documentation. */
+    .row.display {
+      background: #eee;
+      font-size: 11px;
+      margin-bottom: 10px;
+      line-height: 2rem;
+      border: solid 1px #c6c6c6;
+      margin-left: 0 !important;
+      margin-right: 0 !important; }
+      .row.display .columns:nth-child(2), .row.display .columns.small-centered, .row.display .columns.large-centered {
+        background: #e1e1e1; }
+      .row.display .columns.color-end {
+        background: #d4d4d4; }
+
+    /* This styles the color blocks used in the color documentation. */
+    .color-block {
+      border-radius: 2px;
+      display: block;
+      padding: 8px 8px 6px;
+      color: #333;
+      text-transform: uppercase;
+      border: 1px solid #ddd;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 25px;
+    }
+      .color-block span {
+        display: block;
+        width: 100%;
+        height: 100px;
+        margin-bottom: 0.42857rem;
+      }
+
+// styleguide util
+.color-block {
+  text-transform: none !important;
+  text-align: center;
+}
+
+.ss-section {
+
+  & > h1, & > h2, & > h3 {
+    text-align: left;
+  }
+  & > h1, & > h2 {
+    margin-bottom: 8px;
+  }
+  & > h1 {
+    font-size: #{map-get(map-get(map-get($header-styles, medium), 'h1'), 'font-size')}px;
+  }
+}
+

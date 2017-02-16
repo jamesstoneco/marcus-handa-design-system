@@ -1,0 +1,85 @@
+---
+colour: 
+- name: 'green'
+  hex: '#30ac9a'
+- name: 'blue'
+  hex: '#496276'
+- name: 'grey'
+  hex: '#aa9f9d'
+- name: 'white'
+  hex: '#ffffff'
+---
+
+<div class="row">
+  <div class="column">
+    <div class="work-item-header app">
+      <img src="http://www.placehold.it/429x735" alt="">
+    </div>
+  </div>
+</div>
+
+<section class="background-grey">
+  <div class="row">
+    <div class="column">
+      <p class="subhead">app design</p>
+      <hr class="short">
+      <h2>Film Friends</h2>
+      <p>This is a fun personal project I took on in my spare time. I love watching films so I figured an app that allowed you to share your film recommendations with friends would be something interesting to design.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="row">
+    <div class="column">
+      <h3>My Role</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat veniam tenetur nam nobis, magni mollitia molestias repudiandae quaerat, facilis officia iure, dolores optio maiores voluptatum quam totam illum aut. Qui.</p>
+
+      <h3>The Challenge</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia officiis exercitationem libero earum ad voluptatem deleniti cum sapiente, ipsam et, velit itaque debitis nihil, alias blanditiis possimus dolore. Architecto, assumenda.</p>
+
+      <h3>Main Colours</h3>
+      <ul class="menu menu-colors">
+        {{#each colour }}
+        <li><a style="background:{{ this.hex }};">{{ this.name }}</a></li>
+        {{/each}}
+      </ul>
+      
+    </div>
+  </div>
+</section>
+
+<section class="background-grey">
+  <div class="row">
+    <div class="column">
+      <h3>The Outcome</h3>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="column"> <a class="outcome-screenshot" href=""><img src="http://www.placehold.it/426x758" alt=""></a> </div>
+    <div class="column"> <a class="outcome-screenshot" href=""><img src="http://www.placehold.it/426x758" alt=""></a> </div>
+    <div class="column"> <a class="outcome-screenshot" href=""><img src="http://www.placehold.it/426x758" alt=""></a> </div>
+  </div>
+  
+  <div class="row align-center">
+    <div class="column shrink">
+      <a class="outcome-link" href="#">Click image to see larger version</a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column outcome-text">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque minima dicta quasi, perferendis nihil recusandae iure molestiae natus. Quidem, impedit ex molestias, neque optio non facilis sequi quos corrupti accusamus?</p>
+      <p>Accusamus impedit at voluptas in eos commodi suscipit unde, obcaecati voluptate doloremque minus ab dolorum culpa qui et tenetur perspiciatis nobis ipsam eius neque architecto quod sint, ipsum quia! Quisquam?</p>
+      <p>Ex deserunt omnis temporibus optio, sint repellat expedita ipsum enim dolorum debitis animi ad dolor autem, soluta obcaecati tempora ducimus quibusdam rerum facere quae. Corrupti, ut architecto natus voluptatibus. Commodi.</p>
+    </div>
+  </div>
+
+</section>
+
+{{> testimonials }}
+
+{{> work-together }}
+
+{{> promo-block-work }}
