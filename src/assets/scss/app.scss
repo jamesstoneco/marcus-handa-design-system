@@ -226,6 +226,7 @@ img.profile {
 }
 
 nav.main {
+  padding-top: 36px;
   a {
     text-transform: uppercase;
     color: $text-body-copy;
@@ -234,4 +235,19 @@ nav.main {
     color: $brand-primary;
     background:none;
   }
+  li a:not(.button){
+    padding: 0;
+    margin-right: 50px;
+
+  }
+  li a {
+    margin-top: 20px;
+  }
+  li a.button {
+    margin-top: 12px;
+    padding: 15px 50px;
+    color: $white;
+    border-radius: 4px;
+  }
 }
+
