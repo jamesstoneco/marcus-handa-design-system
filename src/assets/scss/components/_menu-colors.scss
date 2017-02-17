@@ -1,0 +1,11 @@
+.menu-colors {
+  li a {
+    // NOTE: set color with inline style
+    text-indent: -9999px;
+    height: 36px;
+    width: 36px;
+    border-radius: $ui-radius-circle;
+    border: solid 1px $ui-outline-grey;
+    margin-right: 10px;
+  }
+}

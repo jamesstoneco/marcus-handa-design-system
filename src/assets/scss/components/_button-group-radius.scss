@@ -1,0 +1,13 @@
+.button-group-radius {
+  @include button-group(a);
+  a { width: 160px; }
+  a:nth-child(1) { 
+    border-top-left-radius: $ui-radius;
+    border-bottom-left-radius: $ui-radius;
+    border-right: none;
+  }
+  a:nth-last-child(1) { 
+    border-top-right-radius: $ui-radius;
+    border-bottom-right-radius: $ui-radius;
+  }
+}

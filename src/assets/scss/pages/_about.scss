@@ -1,0 +1,10 @@
+.about {
+  text-align: center;
+  h2, p { text-align: left; }
+  h1, img { margin-bottom: $brand-spacing-level-1; }
+  h2 { margin-bottom: 12px; }
+  .profile {
+    height: 84px;
+    width: 84px;
+  }
+}

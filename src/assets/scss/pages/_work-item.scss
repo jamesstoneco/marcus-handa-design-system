@@ -1,0 +1,39 @@
+// SPECIFIC TO WORK-ITEM-HEADER PATTERN
+$work-item-app-height-crop: 456px;
+$work-item-app-width-actual: 435px;
+
+$work-item-site-height-crop: $work-item-app-height-crop;
+$work-item-site-width-actual: 700px;
+
+.work-item-header {
+  text-align: center;
+  overflow: hidden;
+  &.app { height: $work-item-app-height-crop; }
+  &.app img {
+    width: $work-item-app-width-actual;
+    clip: rect(0px,$work-item-app-width-actual,$work-item-app-height-crop,0px);
+  }
+  &.site { height: $work-item-site-height-crop; }
+  &.site img {
+    @include brand-shadow(#adadad, 0.3);
+    width: $work-item-site-width-actual;
+    clip: rect(0px,$work-item-site-width-actual,$work-item-site-height-crop,0px);
+  }
+  img {
+    // center image
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+  }
+}
+
+.outcome-screenshot img {
+  @include brand-shadow;
+  margin-bottom: 13px;
+}
+.outcome-link {
+  font-weight: 600;
+  text-decoration: underline;
+}
+.outcome-text { padding-top: 48px; }

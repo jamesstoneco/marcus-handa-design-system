@@ -1,0 +1,12 @@
+.featured-work {
+  .row { margin-bottom: $brand-spacing-level-1; }
+  .button {margin-bottom: 0; }
+}
+
+p.category {
+  color: $text-subhead;
+  font-size: 12px;
+  font-family: $brand-font-headline;
+  font-weight: 500;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,45 @@
+nav.main, nav.footer {
+  padding-top: 36px;
+  padding-bottom: 48px;
+  a {
+    text-transform: uppercase;
+    color: $text-body-copy;
+  }
+  li.active a {
+    color: $brand-primary;
+    background:none;
+  }
+
+  li.active a.button {
+    color: $brand-primary;
+    background:none;
+    border-color: $ui-outline-grey;
+  }
+  li a:not(.button){
+    padding: 0;
+    margin-right: $brand-spacing-level-1;
+  }
+  li a { margin-top: 20px; }
+  li a.button {
+    margin-top: 12px;
+    padding: 15px $brand-spacing-level-1;
+    color: $white;
+    border-radius: $ui-radius;
+  }
+}
+
+nav.footer {
+  padding-top: 60px;
+  padding-bottom: 14px;
+  li:nth-last-child(1) a { margin-right: 0; }
+}
+
+nav.social {
+  padding-top: 60px;
+  // float: right;
+  ul li a {
+    margin-right: 30px;
+    padding: 0;
+  }
+  ul li:nth-last-child(1) a { margin-right: 0; }
+}

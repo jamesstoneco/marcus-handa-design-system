@@ -1,0 +1,6 @@
+hr { border-color: $brand-primary; }
+hr.short {
+  margin-top: 0;
+  margin-bottom: 8px;
+  width: $brand-spacing-level-1;
+}

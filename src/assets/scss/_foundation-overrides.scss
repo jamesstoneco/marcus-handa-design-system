@@ -1,0 +1,16 @@
+.button {
+  font-family: $brand-font-button;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 16px 29px, 14px, 29px;
+  text-transform: uppercase;
+  &.hollow {
+    border-color: $ui-outline-grey;
+    color: $brand-primary;
+    &:hover {
+      border-color: darken($ui-outline-grey, 5%);
+      color: $brand-primary;
+      background:darken($brand-white, 5%);
+    }
+  }
+}
