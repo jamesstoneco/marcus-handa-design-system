@@ -2,7 +2,8 @@
   font-family: $brand-font-button;
   font-size: 12px;
   font-weight: 600;
-  padding: 16px 29px, 14px, 29px;
+  // padding: 16px 30px, 14px, 30px;
+  // background:#f00 !important;
   text-transform: uppercase;
   &.hollow {
     border-color: $ui-outline-grey;
@@ -12,5 +13,10 @@
       color: $brand-primary;
       background:darken($brand-white, 5%);
     }
+  }
+  &.large {
+    border-radius: 4px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 }

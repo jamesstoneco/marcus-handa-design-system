@@ -5,6 +5,18 @@
   h1 { margin-bottom: 12px; }
   p { margin-bottom: 20px; }
 
+  a {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 16px 22px 15px 22px;
+  }
+  
+  a img {
+    position: relative;
+    top: -2px;
+    margin-right: 10px;
+  }
+
   h1 strong {
     color: $primary-color;
   }

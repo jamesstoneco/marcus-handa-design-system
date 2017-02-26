@@ -1,4 +1,7 @@
-hr { border-color: $brand-primary; }
+hr { 
+  border-color: $brand-primary; 
+  border-bottom-width: 2px;
+}
 hr.short {
   margin-top: 0;
   margin-bottom: 8px;
