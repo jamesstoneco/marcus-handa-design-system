@@ -178,11 +178,11 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quibusdam ratione 
 
 # Hero
 
-Use this at the top of the page to create a nice formatted hero section.
+Use this at the top of the page to create a nice formatted hero section. `&lt;strong&gt;` uses the `$brand-primary` color.
 
 ```html_example
 <div class="hero">
-  <h1>I Design Beautiful Solutions for Solopreneurs, Startups and Developers</h1>
+  <h1 class="text-center">I Design Beautiful Solutions for <strong>Solopreneurs</strong>, <strong>Startups</strong> and <strong>Developers</strong></h1>
   <p>Let’s work together to bring your projects and idea’s to life!</p>
   <a href="#" class="button hollow">VIEW MY WORK</a>
 </div>

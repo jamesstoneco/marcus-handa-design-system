@@ -4,4 +4,8 @@
   padding-bottom: $brand-spacing-level-3;
   h1 { margin-bottom: 12px; }
   p { margin-bottom: 20px; }
+
+  h1 strong {
+    color: $primary-color;
+  }
 }
