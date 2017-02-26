@@ -1,4 +1,10 @@
 footer {
+  @include breakpoint(small only) {
+    text-align: center !important;
+    p {
+      margin-top: 16px;
+    }
+  }
   background: $ui-section-grey;
   .logo img { margin-top: 60px; }
   p {

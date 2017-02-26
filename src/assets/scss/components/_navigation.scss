@@ -58,7 +58,14 @@ nav.main {
 nav.footer {
   padding-top: 60px;
   padding-bottom: 14px;
-  li:nth-last-child(1) a { margin-right: 0; }
+  @include breakpoint(medium up) {
+    li:nth-last-child(1) a { margin-right: 0; }
+  }
+  @include breakpoint(small only) {
+    li a {
+      margin-right: 0 !important;
+    }
+  }
 }
 
 nav.social {
