@@ -1,6 +1,4 @@
-nav.main, nav.footer {
-  padding-top: 36px;
-  padding-bottom: 48px;
+nav.main, nav.footer, nav.mobile {
   a {
     text-transform: uppercase;
     color: $text-body-copy;
@@ -9,6 +7,11 @@ nav.main, nav.footer {
     color: $brand-primary;
     background:none;
   }
+}
+
+nav.main, nav.footer {
+  padding-top: 36px;
+  padding-bottom: 48px;
 
   li.active a.button {
     color: $brand-primary;
@@ -28,6 +31,21 @@ nav.main, nav.footer {
   }
 }
 
+nav.main {
+  @include breakpoint(small only) {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.mobile-nav-button {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  padding-top: 26px;
+}
+
 nav.footer {
   padding-top: 60px;
   padding-bottom: 14px;
@@ -43,3 +61,5 @@ nav.social {
   }
   ul li:nth-last-child(1) a { margin-right: 0; }
 }
+
+

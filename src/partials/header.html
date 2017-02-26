@@ -1,14 +1,37 @@
-<div class="row">
-  <div class="column small-12">
-    <nav class="main">
-    <a href="/" class="logo"><img src="assets/img/logo.svg" alt=""></a>
+  <div class="off-canvas position-right" id="mobileNav" data-transition="overlap" data-off-canvas>
 
-      <ul class="menu float-right">
+    <!-- Close button -->
+    <button class="close-button" aria-label="Close menu" type="button" data-close>
+      <span aria-hidden="true">&times;</span>
+    </button>
+
+    <!-- Menu -->
+    <nav class="mobile">
+      <ul class="vertical menu">
         <li {{#ifpage 'home' }}class="active"{{/ifpage}}><a href="home.html">home</a></li>
         <li {{#ifpage 'work' }}class="active"{{/ifpage}}><a href="work.html">my work</a></li>
         <li {{#ifpage 'about' }}class="active"{{/ifpage}}><a href="about.html">about me</a></li>
-        <li {{#ifpage 'contact' }}class="active"{{/ifpage}}><a class="button" href="contact.html">let's talk</a></li>
+        <li {{#ifpage 'contact' }}class="active"{{/ifpage}}><a href="contact.html">let's talk</a></li>
       </ul>
     </nav>
   </div>
-</div>
+
+  <div class="off-canvas-content" data-off-canvas-content>
+    <!-- Your page content lives here -->
+
+    <a class="mobile-nav-button show-for-small-only" data-toggle="mobileNav"><img src="assets/img/menu-icon.svg" alt=""></a>
+
+    <div class="row">
+      <div class="column small-12">
+        <nav class="main">
+          <a href="/" class="logo"><img src="assets/img/logo.svg" alt=""></a>
+
+          <ul class="menu float-right hide-for-small-only">
+            <li {{#ifpage 'home' }}class="active"{{/ifpage}}><a href="home.html">home</a></li>
+            <li {{#ifpage 'work' }}class="active"{{/ifpage}}><a href="work.html">my work</a></li>
+            <li {{#ifpage 'about' }}class="active"{{/ifpage}}><a href="about.html">about me</a></li>
+            <li {{#ifpage 'contact' }}class="active"{{/ifpage}}><a class="button" href="contact.html">let's talk</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
