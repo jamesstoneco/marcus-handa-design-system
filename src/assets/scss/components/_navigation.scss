@@ -1,9 +1,18 @@
+@mixin nav-hover($element-color) {
+  transition: $button-transition;
+  &:hover {
+    color: scale-color($element-color, $lightness: -15%);
+  }
+}
+
 nav.main, nav.footer, nav.mobile {
   a {
+    @include nav-hover($text-body-copy);
     text-transform: uppercase;
     color: $text-body-copy;
   }
   li.active a {
+    @include nav-hover($primary-color);
     color: $brand-primary;
     background:none;
   }
@@ -54,7 +63,6 @@ nav.footer {
 
 nav.social {
   padding-top: 60px;
-  // float: right;
   ul li a {
     margin-right: 30px;
     padding: 0;
