@@ -6,5 +6,8 @@ $(document).ready(function() {
     $('html, body').animate({
       scrollTop: $( $("#js-marker-work")).offset().top
     }, 1200);
-  })
+  });
+
+  $('.testimonial-slider').slick();
+
 });

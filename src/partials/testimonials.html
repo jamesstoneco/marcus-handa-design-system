@@ -5,19 +5,29 @@
       <hr class="short">
       <h2>Testimonials</h2>
       
-      <div class="row align-center">
-        <div class="column medium-8">
-
-          <!-- TODO: [SLIDER] use slick.js -->
-
-          <p>“I’ve worked with Marcus on several websites. He is a rare combination of keen design sense coupled with modern workflow (Sketch 3 and Zeplin). He makes my life as a developer easier. He handles the design freeing me up to focus on the code.”</p>
-        </div>
-      </div>
-
+      
+      <div class="testimonial-slider">
+        {{#repeat 3}}
+<div>
+  <div class="row align-center">
+    <div class="column medium-8">
+  
+      <!-- TODO: [SLIDER] use slick.js -->
+  
+      <p>“I’ve worked with Marcus on several websites. He is a rare combination of keen design sense coupled with modern workflow (Sketch 3 and Zeplin). He makes my life as a developer easier. He handles the design freeing me up to focus on the code.”</p>
+      
       <p>James Stone - Web Developer</p>
       <p>James Stone Intermedia</p>
+  
+      <center> <!-- HACK -->
+        <img class="rounded profile" src="http://www.placehold.it/200x200" alt="">
+      </center>
 
-      <p> <img class="rounded profile" src="http://www.placehold.it/200x200" alt=""> </p>
+    </div>
+  </div>
+</div>
+        {{/repeat}}
+      </div>
     </div>
   </div>
 </section>
