@@ -8,9 +8,12 @@ body,
 
 // TODO: need mobile media query
 .flex-fill {
+  padding: 0;
   height: calc(100% - 344px);
-  .row { height: 100%; }
-  .no-footer {
-    height: calc(100% - 156px);
+  &.no-footer { height: calc(100% - 156px); }
+  @include breakpoint (small only) {
+    height: calc(100% - 210px);
+    &.no-footer { height: calc(100% - 110px); }
   }
+  .row { height: 100%; }
 }
