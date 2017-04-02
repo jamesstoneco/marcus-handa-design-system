@@ -1,0 +1,16 @@
+html,
+body, 
+.off-canvas,
+.off-canvas-content {
+  height: 100%;
+  margin: 0
+}
+
+// TODO: need mobile media query
+.flex-fill {
+  height: calc(100% - 344px);
+  .row { height: 100%; }
+  .no-footer {
+    height: calc(100% - 156px);
+  }
+}

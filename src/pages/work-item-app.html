@@ -1,13 +1,13 @@
 ---
 colour: 
-- name: 'green'
-  hex: '#30ac9a'
-- name: 'blue'
-  hex: '#496276'
-- name: 'grey'
-  hex: '#aa9f9d'
-- name: 'white'
-  hex: '#ffffff'
+  - name: 'green'
+    hex: '#30ac9a'
+  - name: 'blue'
+    hex: '#496276'
+  - name: 'grey'
+    hex: '#aa9f9d'
+  - name: 'white'
+    hex: '#ffffff'
 ---
 
 <div class="row">
@@ -56,17 +56,20 @@ colour:
     </div>
   </div>
   
+
   <div class="row">
-    <div class="column"> <a class="outcome-screenshot" href=""><img src="http://www.placehold.it/426x758" alt=""></a> </div>
-    <div class="column"> <a class="outcome-screenshot" href=""><img src="http://www.placehold.it/426x758" alt=""></a> </div>
-    <div class="column"> <a class="outcome-screenshot" href=""><img src="http://www.placehold.it/426x758" alt=""></a> </div>
+    <div class="column"> <a class="outcome-screenshot"><img src="http://www.placehold.it/426x758?text=1" alt=""></a> </div>
+    <div class="column"> <a class="outcome-screenshot"><img src="http://www.placehold.it/426x758?text=2" alt=""></a> </div>
+    <div class="column"> <a class="outcome-screenshot"><img src="http://www.placehold.it/426x758?text=3" alt=""></a> </div>
   </div>
-  
+
   <div class="row align-center">
     <div class="column shrink">
-      <a class="outcome-link" href="#">Click image to see larger version</a>
+      <a class="outcome-link">Click image to see larger version</a>
     </div>
   </div>
+
+  <div class="reveal" id="outcome-screenshot-modal" data-reveal> </div>
 
   <div class="row">
     <div class="column outcome-text">
@@ -77,6 +80,7 @@ colour:
   </div>
 
 </section>
+
 
 {{> testimonials }}
 

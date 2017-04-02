@@ -45,7 +45,7 @@
 // @include foundation-meter-element;
 // @include foundation-slider;
 // @include foundation-sticky;
-// @include foundation-reveal;
+@include foundation-reveal;
 // @include foundation-switch;
 // @include foundation-table;
 // @include foundation-tabs;
@@ -75,6 +75,7 @@
 @import "components/hr";
 @import "components/hero";
 @import "components/footer";
+@import "components/flex-fill";
 @import "components/featured-work";
 @import "components/testimonials";
 @import "components/promo-block-work";

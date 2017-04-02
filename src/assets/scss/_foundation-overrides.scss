@@ -5,13 +5,16 @@
   // padding: 16px 30px, 14px, 30px;
   // background:#f00 !important;
   text-transform: uppercase;
+  &:hover {
+    background:$ui-solid-button-hover;
+  }
   &.hollow {
     border-color: $ui-outline-grey;
     color: $brand-primary;
     &:hover {
-      border-color: darken($ui-outline-grey, 5%);
+      border-color: $brand-primary;
       color: $brand-primary;
-      background:darken($brand-white, 5%);
+      background: none;
     }
   }
   &.large {
