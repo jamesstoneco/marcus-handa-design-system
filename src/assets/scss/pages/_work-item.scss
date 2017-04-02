@@ -31,6 +31,7 @@ $work-item-site-width-actual: 700px;
 .outcome-screenshot img {
   @include brand-shadow;
   margin-bottom: 13px;
+  max-width: 700px;
 }
 .outcome-link {
   font-weight: 600;

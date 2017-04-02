@@ -23,3 +23,8 @@
     padding-right: 60px;
   }
 }
+
+.reveal {
+  @include reveal-modal-fullscreen;
+  padding: $brand-spacing-level-1;
+}

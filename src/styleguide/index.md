@@ -277,7 +277,7 @@ This gives a quick way to show outcomes in a work / case study page.
 </div>
 ```
 
-# Mobile App Example
+# Site Example
 
 ```html_example
 <div class="row align-center">
