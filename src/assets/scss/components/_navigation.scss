@@ -13,11 +13,13 @@ nav.main, nav.footer, nav.mobile {
     font-family: $brand-font-headline;
     font-weight: $brand-font-weight-medium;
     font-size: 14px;
+    transition: color .3s;
+    &:hover { color: $brand-primary; }
   }
   li.active a {
     color: $brand-primary;
     background:none;
-    transition: $button-transition;
+    transition: color .3s;
     &:hover {
       color:$ui-solid-button-hover;
     }
@@ -31,7 +33,9 @@ nav.main, nav.footer {
   li.active a.button {
     color: $brand-primary;
     background:none;
+    transition: border-color .3s;
     border-color: $ui-outline-grey;
+    &:hover { border-color: $brand-primary; }
   }
   li a:not(.button){
     padding: 0;
@@ -43,6 +47,7 @@ nav.main, nav.footer {
     padding: 15px $brand-spacing-level-1;
     color: $white;
     border-radius: $ui-radius;
+    transition: $button-transition;
   }
 }
 

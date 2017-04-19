@@ -15,5 +15,14 @@
   a {
     padding-left: 20px;
     padding-right: 20px;
+    font-family: $brand-font-headline;
+    font-weight: $brand-font-weight-medium;
+    font-height: 13px;
+    padding: 17px 15px 14px 15px;
+  }
+  a.hollow {
+    transition: border-color .3s;
+    border-right: none;
+    &:hover { border-color: $brand-primary; }
   }
 }

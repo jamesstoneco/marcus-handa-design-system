@@ -33,3 +33,37 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.03em;
   line-height: 1.125;
 }
+
+form {
+  label {
+    // background:#f00;
+    font-family: $brand-font-headline;
+    font-weight: $brand-font-weight-medium;
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  span.required {
+    color: $brand-primary;
+  }
+  input[type=text], textarea {
+    margin-bottom: 36px;
+    height: auto !important;
+    padding: 15px !important;
+    box-shadow: none !important;
+    border: solid 1px $ui-outline-grey;
+    &:focus {
+      border: solid 1px $brand-primary !important;
+    }
+    &::placeholder {
+      color: $ui-placeholder-grey;
+    }
+  }
+  input[type=text], textarea {
+    // height: 48px !important;
+  }
+  textarea {
+    line-height: 1.5;
+    resize: none;
+
+  }
+}

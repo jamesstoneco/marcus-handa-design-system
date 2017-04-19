@@ -27,15 +27,13 @@
 
       <form action="thanks.html">
 
-        <label for="email">Name and email address *
-          <input name="email" type="text">
-        </label>
+        <label for="email">Name and email address<span class="required">*</span></label>
+          <input name="email" type="text" placeholder="e.g. Marcus Handa, marcus@marcushanda.co">
 
         {{#repeat 6}}
         
-        <label for="field-2">Lorem ipsum dolor *
+        <label for="field-2">Lorem ipsum dolor<span class="required">*</span> </label>
           <textarea name="field-2" id="field-2" cols="30" rows="3"></textarea>
-        </label>
         {{/repeat }}
         
         <center> <input type="submit" value="send" class="button large"> </center>
