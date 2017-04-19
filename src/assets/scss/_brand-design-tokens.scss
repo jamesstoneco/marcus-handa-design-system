@@ -27,6 +27,17 @@ $brand-font-body-copy: "proxima-nova", 'Helvetica Neue', Helvetica, Roboto, Aria
 $brand-font-headline: "brandon-grotesque", 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $brand-font-button: $brand-font-headline;
 
+// font weights
+
+$brand-font-weight-thin: 100;
+$brand-font-weight-extra-light: 200;
+$brand-font-weight-light: 300;
+$brand-font-weight-normal: 400;
+$brand-font-weight-medium: 500;
+$brand-font-weight-semi-bold: 600;
+$brand-font-weight-bold: 700;
+$brand-font-weight-black: 800;
+
 // spacing
 $brand-spacing-level-1: 48px;
 $brand-spacing-level-2: $brand-spacing-level-1 * 2;

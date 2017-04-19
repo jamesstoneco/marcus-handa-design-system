@@ -10,6 +10,9 @@ nav.main, nav.footer, nav.mobile {
     @include nav-hover($text-body-copy);
     text-transform: uppercase;
     color: $text-body-copy;
+    font-family: $brand-font-headline;
+    font-weight: $brand-font-weight-medium;
+    font-size: 14px;
   }
   li.active a {
     color: $brand-primary;

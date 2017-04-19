@@ -28,3 +28,8 @@
   @include reveal-modal-fullscreen;
   padding: $brand-spacing-level-1;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 0.03em;
+  line-height: 1.125;
+}

@@ -1,7 +1,7 @@
 .button-group-radius {
   @include button-group(a);
   @include breakpoint(medium up) {
-    a { width: 160px; }
+    a { min-width: 160px; }
   }
   a:nth-child(1) { 
     border-top-left-radius: $ui-radius;

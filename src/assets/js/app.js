@@ -7,6 +7,11 @@ $(document).ready(function() {
       scrollTop: $( $("#js-marker-work")).offset().top
     }, 1200);
   });
+  $("#js-trigger-project-inquiry").on('click', function() {
+    $('html, body').animate({
+      scrollTop: $( $("#js-marker-project-inquiry")).offset().top
+    }, 1200);
+  });
 
   $('.testimonial-slider').slick();
 
