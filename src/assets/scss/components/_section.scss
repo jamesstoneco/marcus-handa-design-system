@@ -12,6 +12,7 @@ section {
   }
   h1, h2, p.subhead { text-align: center; }
   h1, h2 { margin-bottom: $brand-spacing-level-2; }
+  h1.less-spacing, h2.less-spacing { margin-bottom: $brand-spacing-level-1; }
   @include breakpoint (small only) {
     h1, h2 { margin-bottom: $brand-spacing-level-1 * 1.5; }
   }
