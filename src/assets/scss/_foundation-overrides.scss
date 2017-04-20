@@ -22,6 +22,11 @@
     padding-left: 60px;
     padding-right: 60px;
   }
+  &.cta {
+    border-radius: $ui-radius;
+    font-size: 13px;
+    padding: 17px 38px 16px 38px;
+  }
 }
 
 .reveal {
