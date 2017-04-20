@@ -1,8 +1,7 @@
 .about {
   text-align: center;
   h2, p { text-align: left; }
-  h1, img { margin-bottom: $brand-spacing-level-1; }
-  h2 { margin-bottom: 12px; }
+  h1, h2, h3, h4, h5, h6, img, p { margin-bottom: $brand-spacing-level-1; }
   .profile {
     height: 84px;
     width: 84px;
