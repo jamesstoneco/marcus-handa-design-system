@@ -1,9 +1,9 @@
 .button {
   font-family: $brand-font-button;
-  font-size: 12px;
-  font-weight: 600;
-  // padding: 16px 30px, 14px, 30px;
-  // background:#f00 !important;
+  font-size: 13px;
+  font-weight: $brand-font-weight-bold;
+  padding: 17px 30px 16px 30px;
+  border-radius: $ui-radius;
   text-transform: uppercase;
   &:hover {
     background:$ui-solid-button-hover;

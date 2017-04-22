@@ -1,5 +1,9 @@
 .featured-work {
-  .row { margin-bottom: $brand-spacing-level-1; }
+  .row { 
+    margin-bottom: $brand-spacing-level-1; 
+    &:nth-child(1) { margin-bottom: 0; }
+    &:nth-last-child(1) { margin-bottom: 0; }
+  }
   .button {margin-bottom: 0; }
 }
 
