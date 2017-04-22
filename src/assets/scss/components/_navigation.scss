@@ -15,20 +15,29 @@ nav.main, nav.footer, nav.mobile {
     color: $text-body-copy;
     font-family: $brand-font-headline;
     font-weight: $brand-font-weight-medium;
-    transition: color .3s;
+    transition: color $ui-transition-speed;
     &:hover { color: $brand-primary; }
   }
   li.active a {
     color: $brand-primary;
     background:none;
-    transition: color .3s;
+    transition: color $ui-transition-speed;
     &:hover {
       color:$ui-solid-button-hover;
     }
   }
 }
 
+nav.mobile {
+  padding-top: 37px;
+  li { margin-bottom: 18px; }
+  a {
+    padding-left: 25px;
+    font-size: 18px;
+  }
+}
 
+.off-canvas .close-button { top: 35px; }
 
 nav.main, nav.footer {
   padding-top: 36px;
@@ -37,7 +46,7 @@ nav.main, nav.footer {
   li.active a.button {
     color: $brand-primary;
     background:none;
-    transition: border-color .3s;
+    transition: border-color $ui-transition-speed;
     border-color: $ui-outline-grey;
     &:hover { border-color: $brand-primary; }
   }
@@ -119,7 +128,7 @@ nav.social {
 .svg-logo {
   #mh-logo-background {
     fill: $brand-primary;
-    transition: fill .3s;
+    transition: fill $ui-transition-speed;
   }
   &:hover {
     #mh-logo-background {

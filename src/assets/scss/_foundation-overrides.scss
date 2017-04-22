@@ -11,6 +11,7 @@
   &.hollow {
     border-color: $ui-outline-grey;
     color: $brand-primary;
+    transition: border-color $ui-transition-speed;
     &:hover {
       border-color: $brand-primary;
       color: $brand-primary;
@@ -23,6 +24,7 @@
     padding-right: 60px;
   }
   &.cta {
+    transition: background $ui-transition-speed;
     border-radius: $ui-radius;
     font-size: 13px;
     padding: 17px 38px 16px 38px;
@@ -77,4 +79,6 @@ p > a:not(.button) {
   // TODO: see if this can be rolled into foundation defaults rather than an override
   text-decoration: underline;
   font-weight: $brand-font-weight-semi-bold;
+  transition: color $ui-transition-speed;
+
 }

@@ -24,7 +24,7 @@
     padding: 17px 15px 16px 15px;
   }
   a.hollow {
-    transition: border-color .3s;
+    transition: border-color $ui-transition-speed;
     border-right: none;
     &:hover { border-color: $brand-primary; }
   }
