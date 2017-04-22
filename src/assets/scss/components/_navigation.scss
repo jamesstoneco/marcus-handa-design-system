@@ -5,6 +5,9 @@
   }
 }
 
+nav.main a { font-size: 13px; }
+nav.footer, nav.mobile { font-size: 14px; }
+
 nav.main, nav.footer, nav.mobile {
   a {
     @include nav-hover($text-body-copy);
@@ -12,7 +15,6 @@ nav.main, nav.footer, nav.mobile {
     color: $text-body-copy;
     font-family: $brand-font-headline;
     font-weight: $brand-font-weight-medium;
-    font-size: 14px;
     transition: color .3s;
     &:hover { color: $brand-primary; }
   }
@@ -25,6 +27,8 @@ nav.main, nav.footer, nav.mobile {
     }
   }
 }
+
+
 
 nav.main, nav.footer {
   padding-top: 36px;
@@ -44,7 +48,7 @@ nav.main, nav.footer {
   li a { margin-top: 13px; }
   li a.button {
     margin-top: 12px;
-    padding: 16px $brand-spacing-level-1;
+    padding: 17px 38px 16px 38px;
     color: $white;
     border-radius: $ui-radius;
     transition: $button-transition;
