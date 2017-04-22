@@ -2,6 +2,7 @@
   text-align: center;
   padding-top: $brand-spacing-level-3;
   padding-bottom: $brand-spacing-level-3;
+  position: relative;
 
   @include breakpoint(small only) {
     padding-top: $brand-spacing-level-1;
@@ -31,8 +32,10 @@
     // font-family: $brand-font-headline;
     // font-weight: $brand-font-weight-medium;
     font-size: 13px;
+    background: $brand-white;
     // border-radius: $ui-radius;
     padding: 13px 30px;
     transition: border-color $ui-transition-speed;
+
   }
 }

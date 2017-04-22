@@ -85,3 +85,23 @@
 @import "components/slick-theme";
 
 // @import "styleguide";
+
+
+// particle prototype below
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+#particles-js {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-position: 50% 50%;
+  z-index: 9999;
+}
