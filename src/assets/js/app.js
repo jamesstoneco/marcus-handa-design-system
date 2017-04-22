@@ -20,7 +20,8 @@ $(document).ready(function() {
     $($modal).html('<div class="wrap-marvel-embed"></div> <button class="close-button" data-close aria-label="Close modal" type="button"> <span aria-hidden="true">&times;</span> </button>');
     // $($modal).html('<div class="wrap-marvel-embed"><iframe src=“https://marvelapp.com/7ci2d69?emb=1” width=“2880" height=“6346” allowTransparency=“true” frameborder=“0”></iframe></div>');
     $('<iframe>', {
-       src: 'https://marvelapp.com/7ci2d69?emb=1',
+       src: 'https://marvelapp.com/1367dd7?emb=1',
+       // src: 'https://marvelapp.com/7ci2d69?emb=1',
        id:  'myFrame',
        class: 'marvel-iframe',
        frameborder: 0,
@@ -147,24 +148,6 @@ $(document).ready(function() {
     },
     "retina_detect": true
   });
-
-  // var count_particles, stats, update;
-  // stats = new Stats;
-  // stats.setMode(0);
-  // stats.domElement.style.position = 'absolute';
-  // stats.domElement.style.left = '0px';
-  // stats.domElement.style.top = '0px';
-  // document.body.appendChild(stats.domElement);
-  // count_particles = document.querySelector('.js-count-particles');
-  // update = function() {
-  //   stats.begin();
-  //   stats.end();
-  //   if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-  //     count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-  //   }
-  //   requestAnimationFrame(update);
-  // };
-  // requestAnimationFrame(update);;
 
 });
 
