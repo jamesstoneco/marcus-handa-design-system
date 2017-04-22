@@ -1,9 +1,9 @@
 hr { 
   border-color: $brand-primary; 
-  border-bottom-width: 2px;
+  border-bottom-width: 1px;
+  margin-bottom: 10px;
 }
 hr.short {
   margin-top: 0;
-  margin-bottom: 8px;
   width: $brand-spacing-level-1;
 }
