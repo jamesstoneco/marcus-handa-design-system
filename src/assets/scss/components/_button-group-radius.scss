@@ -1,24 +1,27 @@
 .button-group-radius {
   @include button-group(a);
+  
+  margin-bottom: 0;
+
   @include breakpoint(medium up) {
     a { min-width: 160px; }
   }
+
   a:nth-child(1) { 
-    border-top-left-radius: $ui-radius;
-    border-bottom-left-radius: $ui-radius;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
     border-right: none;
   }
   a:nth-last-child(1) { 
-    border-top-right-radius: $ui-radius;
-    border-bottom-right-radius: $ui-radius;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
   a {
     padding-left: 20px;
     padding-right: 20px;
     font-family: $brand-font-headline;
-    font-weight: $brand-font-weight-medium;
-    font-height: 13px;
-    padding: 17px 15px 14px 15px;
+    font-weight: $brand-font-weight-bold;
+    padding: 17px 15px 16px 15px;
   }
   a.hollow {
     transition: border-color .3s;

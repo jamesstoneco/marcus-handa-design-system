@@ -74,6 +74,7 @@ form {
 }
 
 p > a:not(.button) {
+  // TODO: see if this can be rolled into foundation defaults rather than an override
   text-decoration: underline;
   font-weight: $brand-font-weight-semi-bold;
 }
