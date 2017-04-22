@@ -8,6 +8,7 @@ $work-item-site-width-actual: 700px;
 .work-item-header {
   text-align: center;
   overflow: hidden;
+  position: relative;
   &.app { height: $work-item-app-height-crop; }
   &.app img {
     width: $work-item-app-width-actual;
