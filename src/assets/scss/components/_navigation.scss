@@ -9,7 +9,7 @@ nav.main a { font-size: 13px; }
 nav.footer, nav.mobile { font-size: 14px; }
 
 nav.main, nav.footer, nav.mobile {
-  a {
+  a:not(.button) {
     @include nav-hover($text-body-copy);
     text-transform: uppercase;
     color: $text-body-copy;
@@ -114,3 +114,16 @@ nav.social {
 }
 
 
+
+
+.svg-logo {
+  #mh-logo-background {
+    fill: $brand-primary;
+    transition: fill .3s;
+  }
+  &:hover {
+    #mh-logo-background {
+      fill:$ui-solid-button-hover;
+    }
+  }
+}

@@ -24,7 +24,11 @@
     <div class="row">
       <div class="column small-12">
         <nav class="main">
-          <a href="/" class="logo"><img src="assets/img/logo.svg" alt=""></a>
+          <a href="/" class="logo">
+            
+{{>logo-svg}}
+
+          </a>
 
           <ul class="menu float-right hide-for-small-only">
             <li {{#ifpage 'home' }}class="active"{{/ifpage}}><a href="home.html">home</a></li>
