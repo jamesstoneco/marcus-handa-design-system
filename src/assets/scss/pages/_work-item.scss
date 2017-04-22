@@ -38,4 +38,12 @@ $work-item-site-width-actual: 700px;
   font-weight: 600;
   text-decoration: underline;
 }
-.outcome-text { padding-top: 48px; }
+.outcome-text { 
+  padding-top: 48px;
+  p {
+    margin-bottom: 24px;
+  }
+  p:nth-last-child(1) {
+    margin-bottom: 0;
+   }
+  }

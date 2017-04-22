@@ -24,6 +24,13 @@ p.limit-width-center {
   margin-bottom: 0;
 }
 
+.flush-bottom-medium-up {
+  @include breakpoint(medium up) {
+    margin-bottom: 0;
+  }
+
+}
+
 .min140 {
   min-width: 140px !important;
 }
