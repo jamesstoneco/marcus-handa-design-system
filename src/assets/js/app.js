@@ -13,7 +13,9 @@ $(document).ready(function() {
     }, 1200);
   });
 
-  $('.testimonial-slider').slick();
+  $('.testimonial-slider').slick({
+    'dots': true,
+  });
 
   $('.outcome-screenshot').on('click', function() {
     var $modal = $('#outcome-screenshot-modal');
