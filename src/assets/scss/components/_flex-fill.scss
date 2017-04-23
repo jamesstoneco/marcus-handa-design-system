@@ -17,13 +17,8 @@ body,
   .row { height: 100%; }
 }
 
-// TODO: update for 404 page
 .flex-fill-404 {
-  padding: 0;
-  // height: calc(100% - 10px);
-  height: calc(100% - 156px);
-  @include breakpoint (small only) {
-    height: calc(100% - 110px); 
+  @include breakpoint (medium up) {
+   height: calc(100% - 146px);
   }
-  .row { height: 100%; }
 }
