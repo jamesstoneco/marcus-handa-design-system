@@ -5,41 +5,62 @@
   }
 }
 
+nav.main a { font-size: 13px; }
+nav.footer, nav.mobile { font-size: 14px; }
+
 nav.main, nav.footer, nav.mobile {
-  a {
+  a:not(.button) {
     @include nav-hover($text-body-copy);
     text-transform: uppercase;
     color: $text-body-copy;
+    font-family: $brand-font-headline;
+    font-weight: $brand-font-weight-medium;
+    transition: color $ui-transition-speed;
+    &:hover { color: $brand-primary; }
   }
   li.active a {
     color: $brand-primary;
     background:none;
-    transition: $button-transition;
+    transition: color $ui-transition-speed;
     &:hover {
       color:$ui-solid-button-hover;
     }
   }
 }
 
+nav.mobile {
+  padding-top: 37px;
+  li { margin-bottom: 18px; }
+  a {
+    padding-left: 25px;
+    font-size: 18px;
+  }
+}
+
+.off-canvas .close-button { top: 35px; }
+
 nav.main, nav.footer {
-  padding-top: 36px;
-  padding-bottom: 48px;
+  padding-top: 26px;
+  padding-bottom: 36px;
 
   li.active a.button {
     color: $brand-primary;
     background:none;
+    transition: border-color $ui-transition-speed;
     border-color: $ui-outline-grey;
+    &:hover { border-color: $brand-primary; }
   }
   li a:not(.button){
     padding: 0;
     margin-right: $brand-spacing-level-1;
   }
-  li a { margin-top: 20px; }
+  li a { margin-top: 13px; }
   li a.button {
     margin-top: 12px;
-    padding: 15px $brand-spacing-level-1;
+    padding: 17px 38px 16px 38px;
     color: $white;
     border-radius: $ui-radius;
+    transition: $button-transition;
   }
 }
 
@@ -102,3 +123,16 @@ nav.social {
 }
 
 
+
+
+.svg-logo {
+  #mh-logo-background {
+    fill: $brand-primary;
+    transition: fill $ui-transition-speed;
+  }
+  &:hover {
+    #mh-logo-background {
+      fill:$ui-solid-button-hover;
+    }
+  }
+}

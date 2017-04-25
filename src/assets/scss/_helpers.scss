@@ -1,5 +1,5 @@
 p.padded-bottom {
-  padding-bottom: $brand-spacing-level-1;
+  margin-bottom: $brand-spacing-level-1;
 }
 
 .rounded { border-radius: $ui-radius-circle; }
@@ -7,4 +7,30 @@ p.padded-bottom {
 img.profile {
   width: 64px;
   height: 64px;
+}
+
+p.limit-width-center {
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.limit-width {
+  max-width: 700px;
+}
+
+.flush-bottom {
+  margin-bottom: 0;
+}
+
+.flush-bottom-medium-up {
+  @include breakpoint(medium up) {
+    margin-bottom: 0;
+  }
+
+}
+
+.min140 {
+  min-width: 140px !important;
 }

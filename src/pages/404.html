@@ -1,8 +1,25 @@
-<section class="background-grey flex-fill">
-
-  <div class="row align-middle">
-    <div class="column small-12 text-center">
-      <h3>We’re sorry, that page cannot be found</h3>
+<section class="flex-fill-404 background-grey">
+  <div class="row">
+    <div class="columns small-12">
+      
+      <p class="subhead">Whoops!</p>
+      
+      <hr class="short">
+      
+      <h2 class="less-spacing">404 Page Not Found</h2>
+      
+      <p class="text-center" style="margin-bottom:24px;">Why not check out some of my latest work while your here!</p>
+      
     </div>
   </div>
+  <div class="row">
+    {{#repeat 4}}
+    <div class="column small-12 medium-3 promo-block-work">
+      <a href="work-item-app.html"><img src="http://www.placehold.it/707x360" alt=""></a>
+      <h3>Lorem</h3>
+      <a href="work-item-app.html" class="button hollow flush-bottom-medium-up">view case study</a>
+    </div>
+    {{/repeat}}
+  </div>
+  
 </section>

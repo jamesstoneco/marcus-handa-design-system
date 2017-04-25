@@ -1,9 +1,9 @@
 .button {
   font-family: $brand-font-button;
-  font-size: 12px;
-  font-weight: 600;
-  // padding: 16px 30px, 14px, 30px;
-  // background:#f00 !important;
+  font-size: 13px;
+  font-weight: $brand-font-weight-bold;
+  padding: 17px 30px 16px 30px;
+  border-radius: $ui-radius;
   text-transform: uppercase;
   &:hover {
     background:$ui-solid-button-hover;
@@ -11,6 +11,7 @@
   &.hollow {
     border-color: $ui-outline-grey;
     color: $brand-primary;
+    transition: border-color $ui-transition-speed;
     &:hover {
       border-color: $brand-primary;
       color: $brand-primary;
@@ -22,9 +23,62 @@
     padding-left: 60px;
     padding-right: 60px;
   }
+  &.cta {
+    transition: background $ui-transition-speed;
+    border-radius: $ui-radius;
+    font-size: 13px;
+    padding: 17px 38px 16px 38px;
+  }
 }
 
 .reveal {
   @include reveal-modal-fullscreen;
   padding: $brand-spacing-level-1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 0.03em;
+  line-height: 1.125;
+}
+
+form {
+  label {
+    // background:#f00;
+    font-family: $brand-font-headline;
+    font-weight: $brand-font-weight-medium;
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  span.required {
+    color: $brand-primary;
+  }
+  input[type=text], textarea {
+    margin-bottom: 36px;
+    height: auto !important;
+    padding: 15px !important;
+    box-shadow: none !important;
+    border: solid 1px $ui-outline-grey;
+    &:focus {
+      border: solid 1px $brand-primary !important;
+    }
+    &::placeholder {
+      color: $ui-placeholder-grey;
+    }
+  }
+  input[type=text], textarea {
+    // height: 48px !important;
+  }
+  textarea {
+    line-height: 1.5;
+    resize: none;
+
+  }
+}
+
+p > a:not(.button) {
+  // TODO: see if this can be rolled into foundation defaults rather than an override
+  text-decoration: underline;
+  font-weight: $brand-font-weight-semi-bold;
+  transition: color $ui-transition-speed;
+
 }

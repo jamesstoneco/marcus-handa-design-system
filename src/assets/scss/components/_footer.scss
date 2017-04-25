@@ -1,4 +1,5 @@
 footer {
+  padding-bottom: 24px;
   @include breakpoint(small only) {
     text-align: center !important;
     p {
@@ -6,7 +7,7 @@ footer {
     }
   }
   background: $ui-section-grey;
-  .logo img { margin-top: 60px; }
+  .logo .svg-logo { margin-top: 60px; }
   p {
     text-align: center;
     font-size: 12px;
