@@ -5,7 +5,10 @@
     height: 36px;
     width: 36px;
     border-radius: $ui-radius-circle;
-    border: solid 1px $ui-outline-grey;
     margin-right: 10px;
+    box-sizing: border-box;
+    &.outline {
+      border: solid 1px $ui-outline-grey;
+    }
   }
 }

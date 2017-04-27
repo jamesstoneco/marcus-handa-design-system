@@ -251,7 +251,7 @@ This provides a colored set of swatches. Please note that the color must be set 
   <li><a style="background:#30ac9a;">green</a></li>
   <li><a style="background:#496276;">blue</a></li>
   <li><a style="background:#aa9f9d;">grey</a></li>
-  <li><a style="background:#ffffff;">white</a></li>
+  <li><a class="outline" style="background:#ffffff;">white</a></li>
 </ul>
 ```
 

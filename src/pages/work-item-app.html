@@ -8,6 +8,7 @@ colour:
     hex: '#aa9f9d'
   - name: 'white'
     hex: '#ffffff'
+    outline: true
 ---
 
 <div class="row">
@@ -42,7 +43,7 @@ colour:
       <h3>Main Colours</h3>
       <ul class="menu menu-colors">
         {{#each colour }}
-        <li><a style="background:{{ this.hex }};">{{ this.name }}</a></li>
+        <li><a {{#if this.outline }} class="outline" {{/if }} style="background:{{ this.hex }};">{{ this.name }}</a></li>
         {{/each}}
       </ul>
       
