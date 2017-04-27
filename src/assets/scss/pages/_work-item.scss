@@ -19,6 +19,10 @@ $work-item-site-width-actual: 700px;
     @include brand-shadow(#adadad, 0.3);
     width: $work-item-site-width-actual;
     clip: rect(0px,$work-item-site-width-actual,$work-item-site-height-crop,0px);
+    @include breakpoint(small only) {
+      position: absolute;
+      bottom: 0;
+    }
   }
   img {
     // center image
