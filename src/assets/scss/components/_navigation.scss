@@ -67,7 +67,6 @@ nav.main, nav.footer {
 nav.main {
   @include breakpoint(small only) {
     padding-top: 25px;
-    padding-left: 15px;
     padding-bottom: 25px;
     .logo 
     img {
